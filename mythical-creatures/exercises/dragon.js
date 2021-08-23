@@ -3,6 +3,14 @@ class Dragon {
     this.name = name
     this.rider = rider
     this.hungry = true
+    this.foodInStomach = 0
+  }
+
+  eat = () => {
+    this.foodInStomach++
+    if (this.foodInStomach >= 3) {
+      this.hungry = false
+    }
   }
 
   greet = () => {
